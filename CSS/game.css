@@ -1,0 +1,77 @@
+body {
+    position: relative;
+}
+
+#container {
+    position: relative;
+    height: 90vh;
+    width: 100%;
+    /* Ensure the container takes full width */
+}
+
+.OscarImages {
+    position: absolute;
+    transition: top 0.5s, left 0.5s;
+    /* Smooth transition for image movement */
+    width: 150px;
+    /* Adjust the width as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+#score {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-weight: bold;
+}
+
+#fail-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: red;
+    display: none;
+}
+
+#view-reward {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: green;
+    display: none;
+}
+
+#restart-button {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+#mute-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#timer {
+    position: fixed;
+    top: 30px;
+    left: 10px;
+    font-weight: bold;
+}
