@@ -1,40 +1,36 @@
 body {
-
-    height: 100vh;
     font-family: 'Bubblegum Sans', cursive;
     color: #FCFDFF;
     background: linear-gradient(to bottom, #92AB58 60%, #6C8140 100%);
+    height: auto; 
+    overflow-y: auto; /
 }
 
-.container {
-    text-align: center;
-}
 
-h1 {
+h2 {
     font-family: 'Bubblegum Sans', cursive;
     font-size: 36px;
 }
-p {
-    font-family: 'Bubblegum Sans', cursive;
-    font-size: 18px;
+
+/* Wrapper for the cat image and "WANTED" text */
+.wanted-wrapper {
+    position: relative;
+    display: inline-block;
 }
 
-h1, p, a {
-    color: white; /* Set text color */
-    text-shadow: 
-        -1px -1px 0 #7C9345,  
-        1px -1px 0 #7C9345,
-        -1px 1px 0 #7C9345,
-        1px 1px 0 #7C9345; /* Apply border-like effect */
+.font-weight-underline{
+    text-decoration: underline;
 }
 
-
-
-/* Add styles for the cat image */
-.cat-image {
+.cat{
     border: 6px solid #383838; /* Add a solid border with the specified color */
-    border-radius: 10px; /* Add border-radius for rounded corners */
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add a subtle shadow effect */
-    padding: 10px; /* Add padding for better spacing */
-    margin-top: 20px; /* Add some top margin for spacing */
+}
+/* Styles for the "WANTED" text */
+.wanted-text {
+    display: inline-block; /* Make the element inline-block */
+    font-size: 28px;
+    font-weight: bold;
+    z-index: 1; /* Ensure text is on top of the image */
+    background-color: #6C8140;
 }
