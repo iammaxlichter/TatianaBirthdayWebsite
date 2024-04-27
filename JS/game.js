@@ -87,11 +87,19 @@ startGame();
 function moveImageRandomly(image) {
     const maxX = container.clientWidth - image.width;
     const maxY = container.clientHeight - image.height;
-    const randomX = Math.floor(Math.random() * maxX);
-    const randomY = Math.floor(Math.random() * maxY);
-    image.style.left = randomX + 'px';
-    image.style.top = randomY + 'px';
+
+    function updatePosition() {
+        const randomX = Math.floor(Math.random() * maxX);
+        const randomY = Math.floor(Math.random() * maxY);
+        image.style.left = randomX + 'px';
+        image.style.top = randomY + 'px';
+    }
+
+    // Update position initially and then at regular intervals
+    updatePosition();
+    setInterval(updatePosition, 1000); // Update position every 2 seconds
 }
+
 
 function createNextImage(prevImage, imageNumber) {
     if (buttonCount >= 10) {
