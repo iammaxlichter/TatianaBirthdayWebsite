@@ -97,7 +97,7 @@ function moveImageRandomly(image) {
 
     // Update position initially and then at regular intervals
     updatePosition();
-    setInterval(updatePosition, 1000); // Update position every 2 seconds
+    setInterval(updatePosition, 5000); // Update position every 2 seconds
 }
 
 

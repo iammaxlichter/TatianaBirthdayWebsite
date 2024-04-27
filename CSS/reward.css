@@ -1,0 +1,29 @@
+body {
+    font-family: 'Bubblegum Sans', cursive;
+    color: #FCFDFF;
+    background: linear-gradient(to bottom, #92AB58 60%, #6C8140 100%);
+    height: auto; 
+    overflow-y: auto; 
+}
+
+
+h2 {
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 33px;
+}
+
+.font-weight-underline{
+    text-decoration: underline;
+}
+
+
+.custom-button{
+    color: #FCFDFF;
+    background-color: #383838;
+    border: 3px solid #383838;
+}
+
+.custom-button:hover{
+    border: 3px solid #383838;
+    color:#383838
+}
