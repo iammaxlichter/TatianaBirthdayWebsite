@@ -1,7 +1,9 @@
+var passwordModal = new bootstrap.Modal(document.getElementById('passwordModal'));
+var rewardModal = new bootstrap.Modal(document.getElementById('rewardModal'));
+
 function showPasswordPrompt() {
     // Show the password prompt modal
-    var modal = new bootstrap.Modal(document.getElementById('passwordModal'));
-    modal.show();
+    passwordModal.show();
 }
 
 function checkPassword() {
@@ -10,11 +12,22 @@ function checkPassword() {
 
     // Check if the entered password is correct
     if (enteredPassword === 'dolphinluvrttg3') {
-        // Password is correct, show the reward modal
-        var rewardModal = new bootstrap.Modal(document.getElementById('rewardModal'));
+        // Password is correct, close the password prompt modal and show the reward modal
+        passwordModal.hide();
         rewardModal.show();
     } else {
         // Incorrect password, show an error message
-        alert('Incorrect password. Please try again.');
+        var errorMessage = document.createElement('div');
+        errorMessage.textContent = 'Incorrect password';
+        errorMessage.classList.add('text-danger');
+
+        var modalBody = document.querySelector('.modal-body');
+        modalBody.appendChild(errorMessage);
+
+        // Remove the error message after 2 seconds
+        setTimeout(function() {
+            errorMessage.remove();
+        }, 2000);
     }
 }
+

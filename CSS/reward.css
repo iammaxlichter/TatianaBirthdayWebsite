@@ -6,6 +6,16 @@ body {
     overflow-y: auto; 
 }
 
+.topModal1{
+    font-size:30px;
+    color:#383838
+}
+.text-danger {
+    color: red;
+    font-size: 14px;
+    margin-top: 8px;
+    text-align: center;
+}
 
 h2 {
     font-family: 'Bubblegum Sans', cursive;
@@ -16,7 +26,6 @@ h2 {
     text-decoration: underline;
 }
 
-
 .custom-button{
     color: #FCFDFF;
     background-color: #383838;
@@ -26,4 +35,15 @@ h2 {
 .custom-button:hover{
     border: 3px solid #383838;
     color:#383838
+}
+
+.custom-button2{
+    color: #383838;
+    border: 3px solid #383838;
+}
+
+.custom-button2:hover{
+    border: 3px solid #383838;
+    color: #FCFDFF;
+    background-color: #383838;
 }

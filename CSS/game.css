@@ -1,11 +1,17 @@
 body {
+    font-family: 'Bubblegum Sans', cursive;
     position: relative;
+}
+
+.container-fluid {
+    height: 100vh;
 }
 
 #container {
     position: relative;
-    height: 90vh;
+    height: 100vh;
     width: 100%;
+    background: linear-gradient(to bottom, #92AB58 60%, #6C8140 100%);
     /* Ensure the container takes full width */
 }
 
@@ -16,6 +22,9 @@ body {
     width: 150px;
     /* Adjust the width as needed */
     height: auto;
+    cursor: pointer;
+    /* Change cursor to pointer on hover */
+
     /* Maintain aspect ratio */
 }
 
@@ -23,7 +32,20 @@ body {
     position: fixed;
     top: 10px;
     left: 10px;
+    font-size: 26px;
+    font-family: 'Bubblegum Sans', cursive;
+    color: #FCFDFF;
     font-weight: bold;
+}
+
+#timer {
+    position: fixed;
+    top: 50px;
+    left: 10px;
+    font-size: 26px;
+    font-weight: bold;
+    font-family: 'Bubblegum Sans', cursive;
+    color: #FCFDFF;
 }
 
 #fail-message {
@@ -34,8 +56,19 @@ body {
     font-size: 24px;
     font-weight: bold;
     text-align: center;
-    color: red;
+    color: #383838;
     display: none;
+}
+
+.custom-button{
+    color: #FCFDFF;
+    background-color: #383838;
+    border: 3px solid #383838;
+}
+
+.custom-button:hover{
+    border: 3px solid #383838;
+    color:#383838
 }
 
 #view-reward {
@@ -46,7 +79,6 @@ body {
     font-size: 24px;
     font-weight: bold;
     text-align: center;
-    color: green;
     display: none;
 }
 
@@ -68,10 +100,15 @@ body {
     border-radius: 50%;
     cursor: pointer;
 }
-
-#timer {
-    position: fixed;
-    top: 30px;
-    left: 10px;
+.fun-message {
+    font-size: 20px;
     font-weight: bold;
+    font-family: 'Bubblegum Sans', cursive;
+    color: #FCFDFF;
+}
+
+@media (max-width: 768px) {
+    .OscarImages {
+        width: 100px; /* Change width to 100px for phones */
+    }
 }

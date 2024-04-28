@@ -19,10 +19,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-12 text-center mx-auto">
-                    <h2>Tatiana, I know it's your birthday, but Oscar got lost chasing a cat!</h2>
+                    <h2>Congratulations! Oscar is back in his king sized bed</h2>
 
                     <p class="pt-5" style="font-size:18px">
-                        <a href="#" class="btn btn-lg custom-button" onclick="showPasswordPrompt()"><i class="fas fa-lock"></i> Tatiana Only <i class="fas fa-lock"></i></a>
+                        <a href="#" class="btn btn-lg custom-button" onclick="showPasswordPrompt()"><i
+                                class="fas fa-lock"></i> Tatiana Only <i class="fas fa-lock"></i></a>
                     </p>
                 </div>
             </div>
@@ -30,52 +31,37 @@
     </div>
 
     <!-- Password Prompt Modal -->
-    <div class="modal" id="passwordModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <!-- Modal Header -->
-                <div class="modal-header">
-                    <h4 class="modal-title">Enter Password</h4>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-
-                <!-- Modal Body -->
-                <div class="modal-body">
-                    <input type="password" class="form-control" id="passwordInput" placeholder="Enter password">
-                </div>
-
-                <!-- Modal Footer -->
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" onclick="checkPassword()">Submit</button>
-                </div>
+<div class="modal" id="passwordModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <!-- Modal Body -->
+            <div class="modal-body pt-3">
+                <p class="topModal1 mx-auto text-center">For Tatiana Only</p>
+                <input type="password" class="form-control" id="passwordInput" placeholder="Enter password">
+            </div>
+            <!-- Modal Footer -->
+            <div class="modal-footer" style="border-top:none">
+                <button type="button" class="btn btn-lg custom-button2" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-lg custom-button" onclick="checkPassword()">Submit</button>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Reward Modal -->
-    <div class="modal" id="rewardModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <!-- Modal Header -->
-                <div class="modal-header">
-                    <h4 class="modal-title">Congratulations!</h4>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-
-                <!-- Modal Body -->
-                <div class="modal-body">
-                    <p>You've unlocked the reward!</p>
-                    <!-- Add your reward content here -->
-                </div>
-
-                <!-- Modal Footer -->
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-                </div>
+<!-- Reward Modal -->
+<div class="modal" id="rewardModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <!-- Modal Body -->
+            <div class="modal-body">
+                <p>You've unlocked the reward!</p>
+                <!-- Add your reward content here -->
             </div>
+            <!-- Modal Footer -->
+            
         </div>
     </div>
+</div>
 
     <!-- Bootstrap JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

@@ -29,7 +29,8 @@ document.body.addEventListener('click', function (event) {
     // Check if the clicked element is not the image or its descendants
     if (!event.target.closest('.OscarImages')) {
         score--;
-        scoreElement.textContent = 'Score: ' + score;
+        createMessage2()
+        scoreElement.textContent = 'Treats: ' + score;
     }
 });
 
@@ -86,11 +87,11 @@ startGame();
 
 function moveImageRandomly(image) {
     const maxX = container.clientWidth - image.width;
-    const maxY = container.clientHeight - image.height;
+    const maxY = container.clientHeight - 180;
 
     function updatePosition() {
         const randomX = Math.floor(Math.random() * maxX);
-        const randomY = Math.floor(Math.random() * maxY);
+        const randomY = Math.floor(Math.random() * (maxY - 100)) + 100; // Adjusted to start from 100 pixels below the top edge
         image.style.left = randomX + 'px';
         image.style.top = randomY + 'px';
     }
@@ -99,6 +100,61 @@ function moveImageRandomly(image) {
     updatePosition();
     setInterval(updatePosition, 5000); // Update position every 2 seconds
 }
+
+function createMessage() {
+    const randomMessages = ['Oscar is Happy!', 'Yum, a sweet treat', 'Big-backed dog', 'Woof! Woof!', 'SPECTACULAR'];
+    const randomIndex = Math.floor(Math.random() * randomMessages.length);
+    const messageText = randomMessages[randomIndex];
+    
+    const message = document.createElement('div');
+    message.textContent = messageText;
+    message.className = 'fun-message';
+    
+    // Randomly position the message within the container
+    const maxX = container.clientWidth - 200; // Adjust 200 according to message width
+    const maxY = container.clientHeight - 200; // Adjust 50 according to message height
+    const randomX = Math.floor(Math.random() * maxX);
+    const randomY = Math.floor(Math.random() * (maxY - 200)) + 200; // Adjusted to start from 100 pixels below the top edge
+    
+    message.style.position = 'absolute';
+    message.style.left = randomX + 'px';
+    message.style.top = randomY + 'px';
+    
+    container.appendChild(message);
+
+    // Set a timeout to remove the message after 2 seconds
+    setTimeout(function() {
+        message.remove();
+    }, 1000);
+}
+
+function createMessage2() {
+    const randomMessages = ['Sassy dog apocalypse', 'He just ran further away!', 'Get back here Oscar!'];
+    const randomIndex = Math.floor(Math.random() * randomMessages.length);
+    const messageText = randomMessages[randomIndex];
+    
+    const message = document.createElement('div');
+    message.textContent = messageText;
+    message.className = 'fun-message';
+    
+    // Randomly position the message within the container
+    const maxX = container.clientWidth - 200; // Adjust 200 according to message width
+    const maxY = container.clientHeight - 200; // Adjust 50 according to message height
+    const randomX = Math.floor(Math.random() * maxX);
+    const randomY = Math.floor(Math.random() * (maxY - 200)) + 200; // Adjusted to start from 100 pixels below the top edge
+    
+    message.style.position = 'absolute';
+    message.style.left = randomX + 'px';
+    message.style.top = randomY + 'px';
+    
+    container.appendChild(message);
+
+    // Set a timeout to remove the message after 2 seconds
+    setTimeout(function() {
+        message.remove();
+    }, 1000);
+}
+
 
 
 function createNextImage(prevImage, imageNumber) {
@@ -122,8 +178,9 @@ function createNextImage(prevImage, imageNumber) {
 
     newImage.addEventListener('click', function () {
         score++;
-        scoreElement.textContent = 'Score: ' + score;
+        scoreElement.textContent = 'Treats: ' + score;
         createNextImage(this, imageNumber + 1); // Pass this image and next image number
+        createMessage();
     });
 
     container.insertBefore(newImage, failMessage); // Insert new image before the fail message
@@ -142,18 +199,14 @@ document.getElementById('OscarImages').alt = 'Oscar image ' + firstImageNumber;
 
 document.getElementById('OscarImages').addEventListener('click', function () {
     score++;
-    scoreElement.textContent = 'Score: ' + score;
+    scoreElement.textContent = 'Treats: ' + score;
     createNextImage(this, 2); // Start the chain by clicking the first image
+    createMessage();
 });
 
 // Initially place the first image at a random position
 moveImageRandomly(document.getElementById('OscarImages'));
 
-// Add event listener to the view reward button
-viewRewardButton.addEventListener('click', function () {
-    alert('Congratulations! You passed!');
-    // Add code to show the reward or perform other actions
-});
 
 // Add event listener to the restart button
 restartButton.addEventListener('click', function () {
