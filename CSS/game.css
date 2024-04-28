@@ -1,5 +1,5 @@
 body {
-    font-family: 'Bubblegum Sans';
+    font-family: 'Bubblegum Sans', cursive;
     position: relative;
 }
 
@@ -33,9 +33,9 @@ body {
     top: 10px;
     left: 10px;
     font-size: 26px;
-    font-family: 'Bubblegum Sans';
     color: #FCFDFF;
     font-weight: bold;
+    font-family: 'Bubblegum Sans', cursive;
 }
 
 #timer {
@@ -44,7 +44,7 @@ body {
     left: 10px;
     font-size: 26px;
     font-weight: bold;
-    font-family: 'Bubblegum Sans';
+    font-family: 'Bubblegum Sans', cursive;
     color: #FCFDFF;
 }
 
@@ -103,8 +103,8 @@ body {
 .fun-message {
     font-size: 20px;
     font-weight: bold;
-    font-family: 'Bubblegum Sans', cursive;
     color: #FCFDFF;
+    font-family: 'Bubblegum Sans', cursive;
 }
 
 @media (max-width: 768px) {
