@@ -1,5 +1,5 @@
 body {
-    font-family: 'Bubblegum Sans', cursive;
+    font-family: 'Bubblegum Sans';
     color: #FCFDFF;
     background: linear-gradient(to bottom, #92AB58 60%, #6C8140 100%);
     height: auto; 
@@ -8,7 +8,7 @@ body {
 
 
 h2 {
-    font-family: 'Bubblegum Sans', cursive;
+    font-family: 'Bubblegum Sans';
     font-size: 33px;
 }
 

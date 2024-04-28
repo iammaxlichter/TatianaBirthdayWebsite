@@ -1,5 +1,5 @@
 body {
-    font-family: 'Bubblegum Sans', cursive;
+    font-family: 'Bubblegum Sans';
     position: relative;
 }
 
@@ -33,7 +33,7 @@ body {
     top: 10px;
     left: 10px;
     font-size: 26px;
-    font-family: 'Bubblegum Sans', cursive;
+    font-family: 'Bubblegum Sans';
     color: #FCFDFF;
     font-weight: bold;
 }
@@ -44,7 +44,7 @@ body {
     left: 10px;
     font-size: 26px;
     font-weight: bold;
-    font-family: 'Bubblegum Sans', cursive;
+    font-family: 'Bubblegum Sans';
     color: #FCFDFF;
 }
 
