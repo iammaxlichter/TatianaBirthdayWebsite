@@ -6,7 +6,16 @@ body {
     overflow-y: auto; 
 }
 
-
+#mute-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
 h2 {
     font-family: 'Bubblegum Sans';
     font-size: 33px;
@@ -29,7 +38,7 @@ h2 {
 /* Styles for the "WANTED" text */
 .wanted-text {
     display: inline-block; /* Make the element inline-block */
-    font-size: 28px;
+    font-size: 20px;
     font-weight: bold;
     z-index: 1; /* Ensure text is on top of the image */
     background-color: #6C8140;

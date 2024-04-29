@@ -14,6 +14,14 @@
 </head>
 
 <body>
+    <audio id="cute-music" autoplay loop>
+        <source src="cute_music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <button id="mute-toggle" onclick="toggleMute()">
+        <i id="mute-icon" class="fas fa-volume-up"></i>
+    </button>
+    
     <div id="container" class="container-fluid">
         <img id="OscarImages" src="" class="OscarImages" style="cursor:pointer" alt="Oscar image">
         <div id="score">Treats: 0</div>
@@ -23,9 +31,6 @@
         <button id="view-reward" class="btn btn-lg custom-button">Oscar is saved! Let's celebrate!</button>
     </div>
     
-    
-    
-    <div id="mute-toggle"><i class="fas fa-volume-up"></i></div>
     <div id="timer">Time: <span id="timer-countdown">15</span> seconds</div>
     
 

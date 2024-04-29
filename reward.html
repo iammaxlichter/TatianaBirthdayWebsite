@@ -15,6 +15,14 @@
 </head>
 
 <body>
+    <audio id="cute-music" autoplay loop>
+        <source src="cute_music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <!-- Mute Toggle Button -->
+    <button id="mute-toggle" onclick="toggleMute()">
+        <i id="mute-icon" class="fas fa-volume-up"></i>
+    </button>
     
     <div class="slider" style="margin-top:15px;">
         <div class="slide-track">
@@ -48,14 +56,14 @@
             <div class="slide">
                 <img src=".\Pictures\GamePictures\OscarGame1.png">
             </div>
-            
-            
+
+
         </div>
     </div>
     <div class="container-fluid" style="padding-top:50px; padding-bottom:50px;">
-        
+
         <div class="container">
-            
+
             <div class="row">
                 <div class="col-md-6 col-12 text-center mx-auto">
                     <h2>Congratulations! Oscar is back on his king sized bed</h2>
@@ -92,7 +100,7 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </div>
     <div class="slider" style="margin-bottom:15px;">
@@ -127,7 +135,7 @@
             <div class="slide">
                 <img src=".\Pictures\GamePictures\OscarGame1.png">
             </div>
-            
+
         </div>
     </div>
 
@@ -154,12 +162,25 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <!-- Modal Body -->
-                <div class="modal-body">
-                    <p>You've unlocked the reward!</p>
+                <div class="modal-body pt-3">
+                    <p class="topModal1 mx-auto text-center">Hi Tatiana</p>
+                    <p class="modalwords mx-auto text-center mt-4">HAPPY BIRTHDAY, IT'S YOUR 21ST. TIME TO CELEBRATE. I
+                        can put all the sappy shit in here because only you can access it. YOU ARE THE BEST GIRLFRIEND
+                        EVER AND YOU DESERVE THE WORLD. I CAN'T WAIT TO SEE YOU LATER TODAY!!!! You make me so happy and
+                        I really hope this put a smile on your face I hope you enjoyed this stupid little website I
+                        made for you. 21
+                        is going to be great for you, you are the absolute best.<br><br> Happy Birthday, I can't wait to
+                        see you.
+                        <br><br><br>
+                        p.s. you can send this website to anyone if you want to, the link is available for everyone
+                    </p>
                     <!-- Add your reward content here -->
                 </div>
                 <!-- Modal Footer -->
-
+                <div class="modal-footer" style="border-top:none">
+                    <button type="button" class="btn btn-lg custom-button2 text-left"
+                        data-bs-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
     </div>

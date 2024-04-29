@@ -3,8 +3,6 @@ const scoreElement = document.getElementById('score');
 const viewRewardButton = document.getElementById('view-reward');
 const failMessage = document.getElementById('fail-message');
 const restartButton = document.getElementById('restart-button');
-const cuteMusic = document.getElementById('cute-music'); // Get the audio element
-const muteToggle = document.getElementById('mute-toggle');
 const timerCountdown = document.getElementById('timer-countdown');
 let score = 0;
 let buttonCount = 1; // Start with the first button
@@ -12,17 +10,7 @@ let usedImages = []; // Array to store used image numbers
 let isMuted = false;
 let timer;
 
-// Function to play the cute music
-function playCuteMusic() {
-    if (!isMuted) {
-        if (cuteMusic.paused) {
-            cuteMusic.play();
-        }
-    }
-}
 
-// Play the cute music when the user clicks anywhere on the page
-document.body.addEventListener('click', playCuteMusic);
 
 // Add event listener to the document body
 document.body.addEventListener('click', function (event) {
@@ -34,17 +22,7 @@ document.body.addEventListener('click', function (event) {
     }
 });
 
-// Mute/unmute toggle functionality
-muteToggle.addEventListener('click', function () {
-    isMuted = !isMuted;
-    if (isMuted) {
-        cuteMusic.pause();
-        muteToggle.innerHTML = '<i class="fas fa-volume-mute"></i>';
-    } else {
-        cuteMusic.play();
-        muteToggle.innerHTML = '<i class="fas fa-volume-up"></i>';
-    }
-});
+
 
 // Timer countdown function
 function startTimer() {
@@ -221,4 +199,42 @@ viewRewardButton.addEventListener('click', function () {
 restartButton.addEventListener('click', function () {
     // Redirect to index.html
     window.location.href = 'index.html';
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Check if the cute music is already playing
+    if (!localStorage.getItem('cuteMusicPaused')) {
+        // Cute music is not paused, play it
+        var cuteMusic = document.getElementById('cute-music');
+        cuteMusic.play();
+    }
+});
+
+// Toggle mute state of the cute music
+function toggleMute() {
+    var cuteMusic = document.getElementById('cute-music');
+    var muteIcon = document.getElementById('mute-icon');
+
+    if (cuteMusic.muted) {
+        // Unmute the music
+        cuteMusic.muted = false;
+        muteIcon.classList.remove('fa-volume-mute');
+        muteIcon.classList.add('fa-volume-up');
+    } else {
+        // Mute the music
+        cuteMusic.muted = true;
+        muteIcon.classList.remove('fa-volume-up');
+        muteIcon.classList.add('fa-volume-mute');
+    }
+}
+
+// Pause the cute music when navigating away from the page
+window.addEventListener('beforeunload', function () {
+    var cuteMusic = document.getElementById('cute-music');
+    if (!cuteMusic.paused) {
+        localStorage.setItem('cuteMusicPaused', 'false');
+    } else {
+        localStorage.setItem('cuteMusicPaused', 'true');
+    }
 });

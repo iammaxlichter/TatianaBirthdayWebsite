@@ -15,6 +15,15 @@
 </head>
 
 <body>
+    <audio id="cute-music" autoplay loop>
+        <source src="cute_music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <button id="mute-toggle" onclick="toggleMute()">
+        <i id="mute-icon" class="fas fa-volume-up"></i>
+    </button>
+
     <div class="container-fluid" style="padding-top:100px; padding-bottom:100px;">
         <div class="container">
             <div class="row">
@@ -26,7 +35,9 @@
                         <br><br>
                         Over the next 15 seconds, click as many pictures of Oscar as you can! Each time you click him,
                         you give him a delicious sweet treat. You need to give him a <span
-                            class="font-weight-underline">MINIMUM of 7 sweet treats before the time runs out!</span> If you misclick any part of the screen that isn't Oscar, he gets sassy and your sweet treat counter is subtracted by one. Once
+                            class="font-weight-underline">MINIMUM of 7 sweet treats before the time runs out!</span> If
+                        you misclick any part of the screen that isn't Oscar, he gets sassy and your sweet treat counter
+                        is subtracted by one. Once
                         you
                         get Oscar all of his sweet treats, he'll return to you happy and with a full stomach, and
                         afterwards, you and him can celebrate your 21st Birthday! Click the button below to start!
@@ -50,6 +61,10 @@
             </div>
         </div>
     </div>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="JS/index.js"></script>
 
 </body>
 
