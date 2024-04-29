@@ -15,53 +15,154 @@
 </head>
 
 <body>
-    <div class="container-fluid" style="padding-top:100px; padding-bottom:100px;">
+    
+    <div class="slider" style="margin-top:15px;">
+        <div class="slide-track">
+            <div class="slide">
+                <img src=".\Pictures\GamePictures\OscarGame1.png">
+            </div>
+            <div class="slide">
+                <img src=".\Pictures\GamePictures\OscarGame1.png">
+            </div>
+            <div class="slide">
+                <img src=".\Pictures\GamePictures\OscarGame1.png">
+            </div>
+            <div class="slide">
+                <img src=".\Pictures\GamePictures\OscarGame1.png">
+            </div>
+            <div class="slide">
+                <img src=".\Pictures\GamePictures\OscarGame1.png">
+            </div>
+            <div class="slide">
+                <img src=".\Pictures\GamePictures\OscarGame1.png">
+            </div>
+            <div class="slide">
+                <img src=".\Pictures\GamePictures\OscarGame1.png">
+            </div>
+            <div class="slide">
+                <img src=".\Pictures\GamePictures\OscarGame1.png">
+            </div>
+            <div class="slide">
+                <img src=".\Pictures\GamePictures\OscarGame1.png">
+            </div>
+            <div class="slide">
+                <img src=".\Pictures\GamePictures\OscarGame1.png">
+            </div>
+            
+            
+        </div>
+    </div>
+    <div class="container-fluid" style="padding-top:50px; padding-bottom:50px;">
+        
         <div class="container">
+            
             <div class="row">
                 <div class="col-md-6 col-12 text-center mx-auto">
-                    <h2>Congratulations! Oscar is back in his king sized bed</h2>
+                    <h2>Congratulations! Oscar is back on his king sized bed</h2>
 
-                    <p class="pt-5" style="font-size:18px">
-                        <a href="#" class="btn btn-lg custom-button" onclick="showPasswordPrompt()"><i
-                                class="fas fa-lock"></i> Tatiana Only <i class="fas fa-lock"></i></a>
+                    <p class="pt-5" style="font-size:18px">Oscar stopped chasing the stupid cat so now you can
+                        celebrate your 21st birthday in peace and with your best friend! You gathered up a TON of treats
+                        and now Oscar is bed-bound (meat coma'd) for the forseeable future.
+                        <br><br>
                     </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-12 text-center mx-auto" style="margin-top:-50px">
+                    <img class="img-fluid w-50 mx-auto text-center" src=".\Pictures\GamePictures\OscarGame1.png">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-12 text-center mx-auto">
+                    Happy Birthday Tatiana, I had a ton of free time and wanted to do something fun for you. I
+                    hoped you enjoyed
+                    this really ridiculous and quick game LOL. Click the button below for a little more content.
+                    </p>
+                </div>
+            </div>
+            <div class="container mt-5">
+                <div class="row justify-content-center p-0">
+                    <div class="col-md-2 col-6 p-0 text-right">
+                        <a href="index.html"><button class="btn btn-lg custom-button2">Play again</button></a>
+                    </div>
+                    <div class="col-md-2 col-6 p-0 text-left">
+                        <a href="#" class="btn btn-lg custom-button" onclick="showPasswordPrompt()"><i
+                                class="fas fa-lock"></i>
+                            Tatiana Only <i class="fas fa-lock"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="slider" style="margin-bottom:15px;">
+        <div class="slide-track">
+            <div class="slide">
+                <img src=".\Pictures\GamePictures\OscarGame1.png">
+            </div>
+            <div class="slide">
+                <img src=".\Pictures\GamePictures\OscarGame1.png">
+            </div>
+            <div class="slide">
+                <img src=".\Pictures\GamePictures\OscarGame1.png">
+            </div>
+            <div class="slide">
+                <img src=".\Pictures\GamePictures\OscarGame1.png">
+            </div>
+            <div class="slide">
+                <img src=".\Pictures\GamePictures\OscarGame1.png">
+            </div>
+            <div class="slide">
+                <img src=".\Pictures\GamePictures\OscarGame1.png">
+            </div>
+            <div class="slide">
+                <img src=".\Pictures\GamePictures\OscarGame1.png">
+            </div>
+            <div class="slide">
+                <img src=".\Pictures\GamePictures\OscarGame1.png">
+            </div>
+            <div class="slide">
+                <img src=".\Pictures\GamePictures\OscarGame1.png">
+            </div>
+            <div class="slide">
+                <img src=".\Pictures\GamePictures\OscarGame1.png">
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Password Prompt Modal -->
+    <div class="modal" id="passwordModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <!-- Modal Body -->
+                <div class="modal-body pt-3">
+                    <p class="topModal1 mx-auto text-center">For Tatiana Only</p>
+                    <input type="password" class="form-control" id="passwordInput" placeholder="Enter password">
+                </div>
+                <!-- Modal Footer -->
+                <div class="modal-footer" style="border-top:none">
+                    <button type="button" class="btn btn-lg custom-button2" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-lg custom-button" onclick="checkPassword()">Submit</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Password Prompt Modal -->
-<div class="modal" id="passwordModal">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <!-- Modal Body -->
-            <div class="modal-body pt-3">
-                <p class="topModal1 mx-auto text-center">For Tatiana Only</p>
-                <input type="password" class="form-control" id="passwordInput" placeholder="Enter password">
-            </div>
-            <!-- Modal Footer -->
-            <div class="modal-footer" style="border-top:none">
-                <button type="button" class="btn btn-lg custom-button2" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-lg custom-button" onclick="checkPassword()">Submit</button>
-            </div>
-        </div>
-    </div>
-</div>
+    <!-- Reward Modal -->
+    <div class="modal" id="rewardModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <p>You've unlocked the reward!</p>
+                    <!-- Add your reward content here -->
+                </div>
+                <!-- Modal Footer -->
 
-<!-- Reward Modal -->
-<div class="modal" id="rewardModal">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <!-- Modal Body -->
-            <div class="modal-body">
-                <p>You've unlocked the reward!</p>
-                <!-- Add your reward content here -->
             </div>
-            <!-- Modal Footer -->
-            
         </div>
     </div>
-</div>
 
     <!-- Bootstrap JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
