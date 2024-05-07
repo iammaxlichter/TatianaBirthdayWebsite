@@ -8,12 +8,21 @@ body {
     place-items: center;
 }
 
+body {
+    font-family: 'Bubblegum Sans', cursive;
+    color: #FCFDFF;
+    background-color: #92AB58;
+    height: auto; 
+    overflow-y: auto; 
+    display:grid;
+    place-items: center;
+}
+
 .slider{
-    height:200px;
+    height: auto;
     margin:auto;
     position:relative;
     width:100%;
-    
     display:grid;
     place-items:center;
     overflow:hidden;
@@ -21,7 +30,7 @@ body {
 
 .slide-track{
     display:flex;
-    width: calc(200px * 9);
+    width: calc(250px * 22); /* Adjusted width for 22 pictures */
     animation: scroll 35s linear infinite;
 }
 
@@ -30,22 +39,25 @@ body {
         transform:translateX(0);
     }
     100%{
-        transform:translateX(calc(-200px*9))
+        transform:translateX(calc(-250px * 22)); /* Adjusted translateX value */
     }
 }
 
 .slide{
-    height:200px;
+    height:200px; /* Keep the height the same as before */
     width:250px;
     display:flex;
     align-items: center;
     padding:15px;
     perspective:100px;
 }
+
 img{
     width:100%;
+    height:auto; /* Maintain aspect ratio */
     transition:transform 1s;
 }
+
 .img:hover{
     transform:translateZ(10px);
 }
@@ -57,7 +69,7 @@ img{
     content: '';
     height: 100%;
     position: absolute;
-    width: 15%;
+    width: 10%; /* Adjusted width for gradient */
     z-index:2;
 }
 
@@ -70,6 +82,9 @@ img{
     top:0;
     transform:rotateZ(180deg);
 }
+
+/* Additional styles for modal and buttons remain unchanged */
+
 
 
 

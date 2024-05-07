@@ -69,7 +69,7 @@ function moveImageRandomly(image) {
 
     function updatePosition() {
         const randomX = Math.floor(Math.random() * maxX);
-        const randomY = Math.floor(Math.random() * (maxY - 100)) + 100; // Adjusted to start from 100 pixels below the top edge
+        const randomY = Math.floor(Math.random() * (maxY - 350)) + 50; // Adjusted to start from 100 pixels below the top edge
         image.style.left = randomX + 'px';
         image.style.top = randomY + 'px';
     }
