@@ -27,9 +27,9 @@ document.body.addEventListener('click', function (event) {
 // Timer countdown function
 function startTimer() {
 
-    let timeLeft = 14;
+    let timeLeft = 24;
     timer = setInterval(function () {
-        if (timeLeft <= 0 || score >= 10 || score <= -4) {
+        if (timeLeft <= 0 || score >= 44 || score <= -4) {
             clearInterval(timer);
             if (score >= 7) {
                 viewRewardButton.style.display = 'block';
@@ -136,8 +136,8 @@ function createMessage2() {
 
 
 function createNextImage(prevImage, imageNumber) {
-    if (buttonCount >= 10) {
-        // Stop creating images after 10
+    if (buttonCount >= 44) {
+        // Stop creating images after 44
         prevImage.remove();
         return;
     }
@@ -145,7 +145,7 @@ function createNextImage(prevImage, imageNumber) {
     buttonCount++; // Increment to track image creation
     let randomImageNumber;
     do {
-        randomImageNumber = Math.floor(Math.random() * 11) + 1; // Generate random image number
+        randomImageNumber = Math.floor(Math.random() * 44) + 1; // Generate random image number
     } while (usedImages.includes(randomImageNumber)); // Check if image number is already used
     usedImages.push(randomImageNumber); // Add the image number to usedImages array
     const newImage = new Image();
@@ -169,7 +169,7 @@ function createNextImage(prevImage, imageNumber) {
 // Generate a random image number for the first image
 let firstImageNumber;
 do {
-    firstImageNumber = Math.floor(Math.random() * 11) + 1;
+    firstImageNumber = Math.floor(Math.random() * 44) + 1;
 } while (usedImages.includes(firstImageNumber)); // Ensure the first image is not repeated
 usedImages.push(firstImageNumber);
 document.getElementById('OscarImages').src = 'Pictures/GamePictures/OscarGame' + firstImageNumber + '.png'; // Change image source path

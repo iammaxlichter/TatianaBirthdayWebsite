@@ -19,7 +19,7 @@ body {
     position: absolute;
     transition: top 0.5s, left 0.5s;
     /* Smooth transition for image movement */
-    width: 150px;
+    width: 200px;
     /* Adjust the width as needed */
     height: auto;
     cursor: pointer;
